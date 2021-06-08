@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+
+<head>
+    <style>
+        body {
+            background-color: #ffffff;
+            margin: 0px;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        #lottie {
+            background-color: #ffffff00;
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: hidden;
+            transform: translate3d(0, 0, 0);
+            text-align: center;
+            opacity: 1;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+        
+        #text:hover{
+            background-color: green;
+        }  
+    </style>
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie.js" integrity="sha256-j5t8yIha0IKq9Oajlw+yBTISHC7DMh1AVIC3v1Ka6S8=" crossorigin="anonymous"></script>
+
+    <script src="./dataLondon.js"></script>
+
+    <video autoplay muted id="myVideo">
+        <source src="londonDrone.mp4" type="video/mp4">
+    </video>
+
+<div id="lottie"></div>
+
+<script>
+    
+
+    var params = {
+        container: document.getElementById('lottie'),
+        renderer: 'html',
+        loop: false,
+        autoplay: true,
+        animationData: animationData
+    };
+
+    var anim;
+
+    anim = lottie.loadAnimation(params);
+
+
+
+</script>
+
+<script>
+    $('#text').click(function(e) {
+        //   e.preventDefault();
+          var linkUrl = $(this).attr('href');
+          setTimeout(function(url) { window.location = "https://www.bbc.co.uk"; }, 100, linkUrl);
+        });
+    </script>
+
+</body>
+</html>
