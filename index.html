@@ -41,7 +41,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie.js" integrity="sha256-j5t8yIha0IKq9Oajlw+yBTISHC7DMh1AVIC3v1Ka6S8=" crossorigin="anonymous"></script>
 
-    <script src="./dataLondon.js"></script>
+    <script src="./dataLondon1.js"></script>
 
     <video autoplay muted id="myVideo">
         <source src="londonDrone.mp4" type="video/mp4">
@@ -54,7 +54,7 @@
 
     var params = {
         container: document.getElementById('lottie'),
-        renderer: 'html',
+        renderer: 'svg',
         loop: false,
         autoplay: true,
         animationData: animationData
@@ -69,7 +69,7 @@
 </script>
 
 <script>
-    $('#text').click(function(e) {
+    $('#textComp2').click(function(e) {
         //   e.preventDefault();
           var linkUrl = $(this).attr('href');
           setTimeout(function(url) { window.location = "https://www.bbc.co.uk"; }, 100, linkUrl);
